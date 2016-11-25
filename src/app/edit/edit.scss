@@ -1,0 +1,80 @@
+$header: 'Baloo Bhai', cursive;
+$text: 'Lato', sans-serif;
+$black: #191919;
+$theme-gray: #e3e3e3;
+
+.title {
+  position: relative;
+  font-family: $header;
+  text-align: center;
+  border-bottom: 2px solid #191919;
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.08);
+  &:before, &:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #f1d8a1;
+    border-width: 14px;
+    margin-left: -30px;
+  }
+  &:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: rgb(25, 25, 25);
+    border-width: 18px;
+    margin-left: -34px;
+  }
+}
+#edit-form {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+    margin: 0;
+    .form-group {
+      padding: 5px;
+      box-shadow: 0 2px 2px rgba(0,0,0,.24),0 0 2px rgba(0,0,0,.12);
+      -ms-flex-direction: row;
+      flex-direction: row;
+      margin: 20px;
+
+      h3, h6, h5 ,select {
+        font-family: $text;
+        margin: 5px;
+        display: inline-block;
+      }
+      h3 + h6, h5 + select {
+        display: inline-block;
+        margin-left: 5px;
+      }
+      h6 {
+        color: #9e9e9e;
+      }
+      hr {
+        opacity: .3;
+      }
+      flex-grow: 1;
+    }
+}
+
+.edit-btn {
+  padding: 5px 10px;
+  font-size: 0.8em;
+  border: none;
+  border-radius: 0;
+  background: #f1d8a1;
+  color: $black;
+  font-family: $text;
+  box-shadow: 0 1px 1px rgba(0,0,0,.24);
+}
+
+.new-btn {
+  float: right;
+  margin: 5px;
+}

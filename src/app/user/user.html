@@ -1,0 +1,5 @@
+<p *ngIf="users < 1" class="no-users">No broadcasters found for this event</p>
+<div *ngFor="let user of users"class="user-comp">
+    <h3>{{user.user}}</h3>
+    <h6>{{user.role}}</h6>
+</div>

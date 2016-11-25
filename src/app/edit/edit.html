@@ -1,0 +1,30 @@
+<div id="edit-container">
+    <h1 class="title">Edit users and roles for this event</h1>
+    <form id="edit-form">
+        <div *ngFor="let user of users" class="form-group">
+            <h3>{{user.user}}</h3><h6>[{{user.role}}]</h6>
+            <hr>
+            <h5>Select role</h5>
+            <select name="role" class="roleSelector" [(ngModel)]="user.role">
+                <!--<option value="none" selected="selected" disabled>Current: </option>-->
+                <option *ngFor="let role of roles" [attr.value]="role.title" [selected]="role.title === user.role"> {{role.title}} </option>
+            </select>
+        </div>
+
+        <div class="form-group add-user">
+            <h3>New user: </h3>
+            <h3 *ngIf="newUser.user">{{newUser.user}}</h3>
+            <h6 *ngIf="newUser.role">[{{newUser.role}}]</h6>
+            <button class="edit-btn new-btn" (click)="createUser()">Add new user</button>
+            <hr>
+            <h5>User name:</h5>
+            <input type="text" name="name" id="user" [(ngModel)]="newUser.user">
+            <h5>Select role</h5>
+            <select name="role" class="roleSelector" [(ngModel)]="newUser.role">
+            <option *ngFor="let role of roles" [ngValue]="role.title">{{role.title}}</option>
+            </select>
+        </div>
+    </form>
+    <button id="updateBtn" class="edit-btn" (click)="update()">Submit changes</button>
+</div>
+

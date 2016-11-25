@@ -1,0 +1,11 @@
+<div class="event card">
+    <a class="tag" [routerLink]="['/events/'+event.tag+'/users']">Edit participants</a>
+
+    <div class="card-block c-body">
+        <h1 class="card-title">{{event.title}}</h1>
+        <p class="card-text">{{event.description}}</p>
+    </div>
+    <div class="card-block c-footer" [ngStyle]="{'background-color': '#'+event.color}">
+        <users class="users-container" [tag]="event.tag"></users>
+    </div>
+</div>

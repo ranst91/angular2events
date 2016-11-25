@@ -1,0 +1,28 @@
+$header: 'Baloo Bhai', cursive;
+$text: 'Lato', sans-serif;
+$theme: #75E8E0;
+$theme2: #E839BD;
+$theme-gray: #e3e3e3;
+
+.user-comp{
+  padding: 10px;
+  box-shadow: 0 2px 0px rgba(0, 0, 0, 0.2);
+  background-color: white;
+  margin: 5px;
+  h3, h6 {
+    font-family: $text;
+    margin: 0;
+  }
+  h4 + h6 {
+    margin-top: 10px;
+  }
+}
+
+.no-users {
+  font-family: $text;
+  font-size: 22px;
+  margin: 20px auto;
+  text-align: center;
+  color: rgba(0,0,0,0.25);
+  font-weight: 600;
+}

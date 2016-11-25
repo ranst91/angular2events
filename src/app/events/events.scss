@@ -1,0 +1,59 @@
+$header: 'Baloo Bhai', cursive;
+$text: 'Lato', sans-serif;
+$black: #191919;
+.title {
+  position: relative;
+  font-family: $header;
+  text-align: center;
+  border-bottom: 2px solid #191919;
+  box-shadow: 0 4px 1px rgba(0, 0, 0, 0.08);
+  &:before, &:after {
+    top: 100%;
+    left: 50%;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+  }
+  &:after {
+    border-color: rgba(136, 183, 213, 0);
+    border-top-color: #f1d8a1;
+    border-width: 14px;
+    margin-left: -30px;
+  }
+  &:before {
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: rgb(25, 25, 25);
+    border-width: 18px;
+    margin-left: -34px;
+  }
+}
+
+.events{
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    box-shadow: 0 2px 2px rgba(0,0,0,.24),0 0 2px rgba(0,0,0,.12);
+    -ms-flex-direction: row;
+    flex-direction: row;
+    width: 32%;
+    flex-grow: 1;
+    margin: 20px;
+    height: 10%;
+  }
+}
+
+
+@media (max-width: 768px) {
+  .events {
+    display: block;
+    li {
+      width: 100%;
+      margin: 10px 0;
+    }
+  }
+}

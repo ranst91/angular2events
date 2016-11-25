@@ -1,0 +1,14 @@
+<nav class="navbar navbar-dark bg-inverse">
+    <h3 class="navbar-brand brand">
+        Events app
+    </h3>
+    <div class="nav navbar-nav container">
+        <a class="nav-item nav-link" [routerLink]="['/']">Home</a>
+        <a class="nav-item nav-link" [routerLink]="['/events']">Events</a>
+        <a class="nav-item nav-link" [routerLink]="['/about']">About</a>
+    </div>
+</nav>
+
+<main class="container wrapper">
+	<router-outlet></router-outlet>
+</main>
